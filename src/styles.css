@@ -1,0 +1,78 @@
+/* Scoped to plugin classes; host theme variables with dark fallbacks. */
+.lh-lab { color: var(--foreground, #e6e6e6); font-size: 0.875rem; line-height: 1.5; }
+.lh-lab__prompt { margin-bottom: 0.75rem; }
+.lh-lab__kit {
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border, #434343);
+  border-radius: 0.5rem;
+}
+.lh-lab__title { font-weight: 600; margin-bottom: 0.35rem; }
+.lh-lab__label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  color: var(--muted-foreground, #8d8d8d);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.lh-lab__equipment, .lh-lab__safety ul { margin: 0; padding-left: 1.1rem; }
+.lh-lab__qty { display: inline-block; min-width: 2.5em; color: var(--muted-foreground, #8d8d8d); font-variant-numeric: tabular-nums; }
+.lh-lab__safety {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-left: 3px solid #d97706;
+  border-radius: 0.25rem;
+  background: color-mix(in oklab, #d97706 12%, transparent);
+}
+.lh-lab__safety .lh-lab__label { margin-top: 0; color: #d97706; }
+.lh-lab__steps { margin: 0; padding-left: 1.4rem; }
+.lh-lab__steps li { margin: 0.2rem 0; }
+.lh-lab__check { display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer; }
+.lh-lab__check input { margin-top: 0.25rem; flex: none; }
+.lh-lab--answered .lh-lab__steps { list-style: none; padding-left: 0; }
+.lh-lab--answered .lh-lab__steps li { display: flex; gap: 0.5rem; }
+.lh-lab__mark { flex: none; width: 1em; text-align: center; }
+.lh-lab--answered .is-done .lh-lab__mark { color: #16a34a; }
+.lh-lab--answered .is-skipped { color: var(--muted-foreground, #8d8d8d); }
+.lh-lab__observations { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.lh-lab__textarea, .lh-lab-settings__textarea, .lh-lab-settings__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid var(--border, #434343);
+  border-radius: 0.375rem;
+  background: var(--background, #141414);
+  color: var(--foreground, #e6e6e6);
+  font: inherit;
+}
+.lh-lab__textarea, .lh-lab-settings__textarea { resize: vertical; min-height: 5em; }
+.lh-lab__textarea:focus-visible, .lh-lab-settings__textarea:focus-visible, .lh-lab-settings__input:focus-visible {
+  outline: 2px solid var(--ring, #8d8d8d);
+  outline-offset: 1px;
+}
+
+.lh-lab-settings { display: flex; flex-direction: column; gap: 1.25rem; color: var(--foreground, #e6e6e6); font-size: 0.875rem; }
+.lh-lab-settings h3 { margin: 0 0 0.25rem; font-size: 0.95rem; font-weight: 600; }
+.lh-lab-settings h4 { margin: 0.75rem 0 0.25rem; font-size: 0.875rem; font-weight: 600; }
+.lh-lab-settings__hint { margin: 0 0 0.5rem; color: var(--muted-foreground, #8d8d8d); font-size: 0.8rem; }
+.lh-lab-settings__error { margin: 0; padding: 0.5rem 0.75rem; border-radius: 0.375rem; background: color-mix(in oklab, #dc2626 15%, transparent); color: #f87171; }
+.lh-lab-settings__table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.lh-lab-settings__table th {
+  padding: 0.25rem 0.35rem;
+  color: var(--muted-foreground, #8d8d8d);
+  font-size: 11px;
+  font-weight: 500;
+  text-align: left;
+}
+.lh-lab-settings__table td { padding: 0.2rem 0.35rem; vertical-align: middle; }
+.lh-lab-settings__table th:nth-child(1), .lh-lab-settings__table td:nth-child(1) { width: 3.75rem; }
+.lh-lab-settings__table th:nth-child(3), .lh-lab-settings__table td:nth-child(3) { width: 5.5rem; }
+.lh-lab-settings__table th:nth-child(5), .lh-lab-settings__table td:nth-child(5) { width: 2.5rem; }
+.lh-lab-settings__preview .lh-lab-settings__table th:nth-child(1), .lh-lab-settings__preview .lh-lab-settings__table td:nth-child(1) { width: 2.5rem; }
+.lh-lab-settings__preview .lh-lab-settings__table th:nth-child(5), .lh-lab-settings__preview .lh-lab-settings__table td:nth-child(5) { width: 11rem; }
+.lh-lab-settings__id, .lh-lab-settings__effect { color: var(--muted-foreground, #8d8d8d); font-family: var(--font-mono, monospace); font-size: 0.75rem; }
+.lh-lab-settings__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.5rem; }
+.lh-lab-settings__status { color: var(--muted-foreground, #8d8d8d); font-size: 0.8rem; }
+.lh-lab-settings__model { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
