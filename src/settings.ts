@@ -148,7 +148,7 @@ export function mountSettings(ctx: PluginFrontendContext, container: HTMLElement
   // ---- Import ----
   const importer = el(doc, "section", "lh-lab-settings__section");
   importer.append(el(doc, "h3", undefined, "Import from text"));
-  importer.append(el(doc, "p", "lh-lab-settings__hint", "Paste a description of your kit in any format. A model turns it into items you can review before anything is saved. Each parse makes one model request, which may cost money."));
+  importer.append(el(doc, "p", "lh-lab-settings__hint", "Paste a description of your kit in any format. A model turns it into items you can review before anything is saved."));
   const modelRow = el(doc, "div", "lh-lab-settings__model");
   const modelLabel = el(doc, "span", "lh-lab-settings__hint");
   const pickerSlot = el(doc, "span");
